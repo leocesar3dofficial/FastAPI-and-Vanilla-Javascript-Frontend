@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLifeApp</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="./scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav id="nav-bar">
+            <img class="brand-title" src="images/icons/logo.svg" alt="logo">
+            <a href="#" id="nav-hamburger-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <ul id="nav-links-list">
+                <li><a class="nav-link" id="nav-expenses" href="">Expenses</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+                <li><a class="nav-link" id="logout-button">Logout</a></li>
+            </ul>
+        </nav>
+        <div id="message-box" class="message-box">
+            <h3></h3>
+        </div>
+    </header>
+    <main>
+        <section id="login">
+            <h1>Login</h1>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Your username goes here..." required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Type your password..." required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        <section id="list-expenses">
+            <h1>Your expenses</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Balance</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="list-expenses-body"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            <nav class="pagination-container">
+                                <button class="pagination-button" id="prev-button" title="Previous page">
+                                    &lt;
+                                </button>
+                                <div id="pagination-numbers">
+                                </div>
+                                <button class="pagination-button" id="next-button" title="Next page">
+                                    &gt;
+                                </button>
+                            </nav>
+                            <button id="create-expenses">Create a new expenses record</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <section id="create-expenses">
+            <h1>Inform your expenses</h1>
+            <form id="create-expenses-form">
+                <div>
+                    <label for="title">Title:</label>
+                    <img src="./images/icons/charts.svg" />
+                    <input type="text" name="title" value="Expenses for march, 2023" required>
+                </div>
+                <div>
+                    <label for="description">Description:</label>
+                    <img src="./images/icons/expenses.svg" />
+                    <input type="text" name="description" value="This was a tough month!" required>
+                </div>
+                <div>
+                    <label for="income">Income:</label>
+                    <img src="./images/icons/coin.svg" />
+                    <input type="number" min="1" step="any" name="income" placeholder="$" value="10.1" required>
+                </div>
+                <div>
+                    <label for="food">Food:</label>
+                    <img src="./images/icons/food.svg" />
+                    <input type="number" min="1" step="any" name="food" placeholder="$" value="5.1" required>
+                </div>
+                <div>
+                    <label for="clothing">Clothing:</label>
+                    <img src="./images/icons/shirt.svg" />
+                    <input type="number" min="1" step="any" name="clothing" placeholder="$" value="13.1" required>
+                </div>
+                <div>
+                    <label for="housing">Housing:</label>
+                    <img src="./images/icons/house.svg" />
+                    <input type="number" min="1" step="any" name="housing" placeholder="$" value="100.1" required>
+                </div>
+                <div>
+                    <label for="healthcare">Healthcare:</label>
+                    <img src="./images/icons/heart.svg" />
+                    <input type="number" min="1" step="any" name="healthcare" placeholder="$" value="10.3" required>
+                </div>
+                <div>
+                    <label for="transportation">Transportation:</label>
+                    <img src="./images/icons/car.svg" />
+                    <input type="number" min="1" step="any" name="transportation" placeholder="$" value="1065.1"
+                        required>
+                </div>
+                <div>
+                    <label for="education">Education:</label>
+                    <img src="./images/icons/brain.svg" />
+                    <input type="number" min="1" step="any" name="education" placeholder="$" value="44.1" required>
+                </div>
+                <div>
+                    <label for="entertainment">Entertainment:</label>
+                    <img src="./images/icons/sunbathing.svg" />
+                    <input type="number" min="1" step="any" name="entertainment" placeholder="$" value="1044.1"
+                        required>
+                </div>
+                <div>
+                    <button type="submit">Save</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+        <section id="update-expenses">
+            <h1>Update your expenses</h1>
+            <form id="update-expenses-form">
+                <label for="title">Title:</label>
+                <input type="text" name="title" required>
+
+                <label for="description">Description:</label>
+                <input type="text" name="description" required>
+
+                <label for="income">Income:</label>
+                <input type="number" min="1" step="any" name="income" placeholder="$" required>
+
+                <label for="food">Food:</label>
+                <input type="number" min="1" step="any" name="food" placeholder="$" required>
+
+                <label for="clothing">Clothing:</label>
+                <input type="number" min="1" step="any" name="clothing" placeholder="$" required>
+
+                <label for="housing">Housing:</label>
+                <input type="number" min="1" step="any" name="housing" placeholder="$" required>
+
+                <label for="healthcare">Healthcare:</label>
+                <input type="number" min="1" step="any" name="healthcare" placeholder="$" required>
+
+                <label for="transportation">Transportation:</label>
+                <input type="number" min="1" step="any" name="transportation" placeholder="$" required>
+
+                <label for="education">Education:</label>
+                <input type="number" min="1" step="any" name="education" placeholder="$" required>
+
+                <label for="entertainment">Entertainment:</label>
+                <input type="number" min="1" step="any" name="entertainment" placeholder="$" required>
+
+                <button type="submit">Save</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>

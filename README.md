@@ -1,1 +1,3 @@
-# FastAPI-and-Vanilla-Javascript-Frontend
+# FastAPI and Vanilla Javascript Frontend
+
+- Fullstack Python FastAPI and Javascript for the frontend.
